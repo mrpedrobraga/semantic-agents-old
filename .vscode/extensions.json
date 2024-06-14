@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
+    "usernamehw.errorlens",
+    "geequlim.godot-tools",
+    "ms-dotnettools.dotnet-interactive-vscode",
+    "ms-semantic-kernel.semantic-kernel",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
+    "ms-toolsai.vscode-jupyter-slideshow"
+  ]
+}

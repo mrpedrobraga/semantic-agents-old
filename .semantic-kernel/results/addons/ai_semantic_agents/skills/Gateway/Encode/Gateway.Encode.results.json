@@ -1,0 +1,174 @@
+{
+    "version": "1.0",
+    "skillName": "Gateway",
+    "functionName": "Encode",
+    "description": "Encodes a natural want in the gateway language.",
+    "filePath": "addons\\ai_semantic_agents\\skills\\Gateway\\Encode\\skprompt.txt",
+    "results": [
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "There are 5 houses. Destroy all of them."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE A SEMANTIC AGENT.\nYOU WILL BE PROMPTED FROM A GAME ENGINE TO GENERATE INTELLIGENT BEHAVIOUR.\nIT IS CRITICAL THAT YOUR ANSWER IS FORMATTED IN A CONSISTENT MANNER.\nYOUR ANSWER MUST BE IN THE COMMAND LANGUAGE SPECIFIED BELOW.\nIF YOU CAN'T FORMULATE A COMMAND, OR PANIC, ANSWER WITH `ERROR: ` AND YOUR BEST EXPLANATION OF WHY YOU FAILED.\n\n`<key> ...params`\n\nA KEY IS A WORD FROM A SET REPRESENTING WHAT THE COMMAND DOES.\nA PARAM IS EITHER A STRING OR AN INTEGER NECESSARY FOR THE COMMAND'S EXECUTION.\nTHE COMMAND MUST MATCH EXACTLY ITS SYNTAX IN PARAMETER TYPE AND LENGTH. \n\nHERE ARE ALL EXISTING COMMANDS AND WHAT THEY DO:\n\n- `create <entity> <x> <y>` -> Creates an entity <entity> at position <x>, <y>;\n- `destroy <entity>` -> Destroys the given entity simply by its name.\n- `interact <entity>` -> Interacts with an entity.\n\n[INPUT]\nThere are 5 houses. Destroy all of them.\n[END INPUT]\n",
+                "durationInMilliseconds": 2532.808,
+                "inputTokens": 244,
+                "outputTokens": 25,
+                "result": "`destroy house1`\n`destroy house2`\n`destroy house3`\n`destroy house4`\n`destroy house5`",
+                "chatCompletionResult": "`destroy house1`\n`destroy house2`\n`destroy house3`\n`destroy house4`\n`destroy house5`"
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "You're at (0, 0). Pedro's throwing arrows from (1,0). You don't want to get hit."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE A SEMANTIC AGENT.\nYOU WILL BE PROMPTED FROM A GAME ENGINE TO GENERATE INTELLIGENT BEHAVIOUR.\nIT IS CRITICAL THAT YOUR ANSWER IS FORMATTED IN A CONSISTENT MANNER.\nYOUR ANSWER MUST BE IN THE COMMAND LANGUAGE SPECIFIED BELOW.\nIF YOU CAN'T FORMULATE A COMMAND, OR PANIC, ANSWER WITH `ERROR: ` AND YOUR BEST EXPLANATION OF WHY YOU FAILED.\n\n`<key> ...params`\n\nA KEY IS A WORD FROM A SET REPRESENTING WHAT THE COMMAND DOES.\nA PARAM IS EITHER A STRING OR AN INTEGER NECESSARY FOR THE COMMAND'S EXECUTION.\n\nHERE ARE ALL EXISTING COMMANDS AND WHAT THEY DO:\n\n- create <entity> <x> <y> -> Creates an entity <entity> at position <x>, <y>;\n- destroy <entity> -> Destroy the created entity.\n- interact <entity> -> Interacts with an entity.\n\n[INPUT]\nYou're at (0, 0). Pedro's throwing arrows from (1,0). You don't want to get hit.\n[END INPUT]\n",
+                "durationInMilliseconds": 1281.0242,
+                "inputTokens": 233,
+                "outputTokens": 6,
+                "result": "create shield 0 0",
+                "chatCompletionResult": "create shield 0 0"
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "You're at (0, 0). Pedro's throwing arrows from (1,0). You don't want to get hit."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE A SEMANTIC AGENT.\nYOU WILL BE PROMPTED FROM A GAME ENGINE TO GENERATE INTELLIGENT BEHAVIOUR.\nIT IS CRITICAL THAT YOUR ANSWER IS FORMATTED IN A CONSISTENT MANNER.\nYOUR ANSWER MUST BE IN THE COMMAND LANGUAGE SPECIFIED BELOW.\nIF YOU CAN'T FORMULATE A COMMAND, OR PANIC, ANSWER WITH `ERROR: ` AND YOUR BEST EXPLANATION OF WHY YOU FAILED.\n\n`<key> ...params`\n\nA KEY IS A WORD FROM A SET REPRESENTING WHAT THE COMMAND DOES.\nA PARAM IS EITHER A STRING OR AN INTEGER NECESSARY FOR THE COMMAND'S EXECUTION.\n\nHERE ARE SOME EXISTING COMMANDS AND WHAT THEY DO:\n\n- create <entity> <x> <y> -> Creates an entity <entity> at position <x>, <y>;\n- destroy <entity> -> Destroy the created entity.\n- interact <entity> -> Interacts with an entity.\n\n[INPUT]\nYou're at (0, 0). Pedro's throwing arrows from (1,0). You don't want to get hit.\n[END INPUT]\n",
+                "durationInMilliseconds": 1291.314,
+                "inputTokens": 233,
+                "outputTokens": 5,
+                "result": "move 1 -1",
+                "chatCompletionResult": "move 1 -1"
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "There is an apple in the map. You are hungry..."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE A SEMANTIC AGENT.\nYOU WILL BE PROMPTED FROM A GAME ENGINE TO GENERATE INTELLIGENT BEHAVIOUR.\nIT IS CRITICAL THAT YOUR ANSWER IS FORMATTED IN A CONSISTENT MANNER.\nYOUR ANSWER MUST BE IN THE COMMAND LANGUAGE SPECIFIED BELOW.\nIF YOU CAN'T FORMULATE A COMMAND, OR PANIC, ANSWER WITH `ERROR: ` AND YOUR BEST EXPLANATION OF WHY YOU FAILED.\n\n`<key> ...params`\n\nA KEY IS A WORD FROM A SET REPRESENTING WHAT THE COMMAND DOES.\nA PARAM IS EITHER A STRING OR AN INTEGER NECESSARY FOR THE COMMAND'S EXECUTION.\n\nHERE ARE SOME EXISTING COMMANDS AND WHAT THEY DO:\n\n- create <entity> <x> <y> -> Creates an entity <entity> at position <x>, <y>;\n- destroy <entity> -> Destroy the created entity.\n- interact <entity> -> Interacts with an entity.\n\n[INPUT]\nThere is an apple in the map. You are hungry...\n[END INPUT]\n",
+                "durationInMilliseconds": 1102.6805,
+                "inputTokens": 218,
+                "outputTokens": 3,
+                "result": "interact apple",
+                "chatCompletionResult": "interact apple"
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "Create an entity that is a fruit."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE A SEMANTIC AGENT.\nYOU WILL BE PROMPTED FROM A GAME ENGINE TO GENERATE INTELLIGENT BEHAVIOUR.\nIT IS CRITICAL THAT YOUR ANSWER IS FORMATTED IN A CONSISTENT MANNER.\nYOUR ANSWER MUST BE IN THE COMMAND LANGUAGE SPECIFIED BELOW.\nIF YOU CAN'T FORMULATE A COMMAND, OR PANIC, ANSWER WITH `ERROR: ` AND YOUR BEST EXPLANATION OF WHY YOU FAILED.\n\n`<key> ...params`\n\nA KEY IS A WORD FROM A SET REPRESENTING WHAT THE COMMAND DOES.\nA PARAM IS EITHER A STRING OR AN INTEGER NECESSARY FOR THE COMMAND'S EXECUTION.\n\nHERE ARE SOME EXISTING COMMANDS AND WHAT THEY DO:\n\n- create <entity> <x> <y> -> Creates an entity <entity> at position <x>, <y>;\n- destroy <entity> -> Destroy the created entity.\n- interact <entity> -> Interacts with an entity.\n\n[INPUT]\nCreate an entity that is a fruit.\n[END INPUT]\n",
+                "durationInMilliseconds": 2390.136,
+                "inputTokens": 214,
+                "outputTokens": 6,
+                "result": "create fruit 0 0",
+                "chatCompletionResult": "create fruit 0 0"
+            }
+        }
+    ]
+}

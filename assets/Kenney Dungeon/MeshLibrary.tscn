@@ -1,0 +1,77 @@
+[gd_scene load_steps=20 format=3 uid="uid://bewinjyg7khbn"]
+
+[ext_resource type="PackedScene" uid="uid://dpw1qfl8lwp6" path="res://assets/Kenney Dungeon/banner.glb" id="1_hv47e"]
+[ext_resource type="PackedScene" uid="uid://cjooc0q7nd16k" path="res://assets/Kenney Dungeon/barrel.glb" id="2_jf7k2"]
+[ext_resource type="PackedScene" uid="uid://cjy6dpseqqvkw" path="res://assets/Kenney Dungeon/chest.glb" id="3_g1hl5"]
+[ext_resource type="PackedScene" uid="uid://bn62xs65kxova" path="res://assets/Kenney Dungeon/coin.glb" id="4_7d3ko"]
+[ext_resource type="PackedScene" uid="uid://cgn62lvraclfl" path="res://assets/Kenney Dungeon/column.glb" id="5_qy6jo"]
+[ext_resource type="PackedScene" uid="uid://tckvk1q542no" path="res://assets/Kenney Dungeon/dirt.glb" id="6_ps2hf"]
+[ext_resource type="PackedScene" uid="uid://doxuliigiw2v7" path="res://assets/Kenney Dungeon/door.glb" id="7_w1tta"]
+[ext_resource type="PackedScene" uid="uid://cdmp3k5rjgwit" path="res://assets/Kenney Dungeon/floor-detail.glb" id="8_gh2ws"]
+[ext_resource type="PackedScene" uid="uid://2rgu6pc3cnid" path="res://assets/Kenney Dungeon/floor.glb" id="9_aw412"]
+[ext_resource type="PackedScene" uid="uid://dfpj1sxvofkx8" path="res://assets/Kenney Dungeon/rocks.glb" id="10_3rgt2"]
+[ext_resource type="PackedScene" uid="uid://bkun3yxuv4bvd" path="res://assets/Kenney Dungeon/stairs.glb" id="11_ljb3r"]
+[ext_resource type="PackedScene" uid="uid://bbx183r8iw6sh" path="res://assets/Kenney Dungeon/stones.glb" id="12_msbck"]
+[ext_resource type="PackedScene" uid="uid://bnxljfcfikmx2" path="res://assets/Kenney Dungeon/trap.glb" id="13_04t6b"]
+[ext_resource type="PackedScene" uid="uid://c6pjeh2t5cqpo" path="res://assets/Kenney Dungeon/wall-half.glb" id="14_52i1h"]
+[ext_resource type="PackedScene" uid="uid://oby1elhqeu0c" path="res://assets/Kenney Dungeon/wall-narrow.glb" id="15_gq1nf"]
+[ext_resource type="PackedScene" uid="uid://b4uc4hwrcv4cs" path="res://assets/Kenney Dungeon/wall-opening.glb" id="16_dgcbc"]
+[ext_resource type="PackedScene" uid="uid://dowdjfvp72nxh" path="res://assets/Kenney Dungeon/wall.glb" id="17_8e8u1"]
+[ext_resource type="PackedScene" uid="uid://7kbcbeyd5jfc" path="res://assets/Kenney Dungeon/wood-structure.glb" id="18_2uuno"]
+[ext_resource type="PackedScene" uid="uid://cvuj0l8nplxek" path="res://assets/Kenney Dungeon/wood-support.glb" id="19_adeeo"]
+
+[node name="MeshLibrary" type="Node3D"]
+
+[node name="banner" parent="." instance=ExtResource("1_hv47e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+
+[node name="barrel" parent="." instance=ExtResource("2_jf7k2")]
+
+[node name="chest" parent="." instance=ExtResource("3_g1hl5")]
+
+[node name="coin" parent="." instance=ExtResource("4_7d3ko")]
+
+[node name="column" parent="." instance=ExtResource("5_qy6jo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, 0)
+
+[node name="dirt" parent="." instance=ExtResource("6_ps2hf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="door" parent="." instance=ExtResource("7_w1tta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.90535, 0)
+
+[node name="floor-detail" parent="." instance=ExtResource("8_gh2ws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="floor" parent="." instance=ExtResource("9_aw412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.19209e-07, 0)
+
+[node name="rocks" parent="." instance=ExtResource("10_3rgt2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="stairs" parent="." instance=ExtResource("11_ljb3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="stones" parent="." instance=ExtResource("12_msbck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="trap" parent="." instance=ExtResource("13_04t6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="wall-half" parent="." instance=ExtResource("14_52i1h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.19209e-07, 0)
+
+[node name="wall-narrow" parent="." instance=ExtResource("15_gq1nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="wall-opening" parent="." instance=ExtResource("16_dgcbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="wall" parent="." instance=ExtResource("17_8e8u1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="wood-structure" parent="." instance=ExtResource("18_2uuno")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="wood-support" parent="." instance=ExtResource("19_adeeo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1.19209e-07, 0)

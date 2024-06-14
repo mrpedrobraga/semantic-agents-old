@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cg2ket3ihsg32"]
+
+[ext_resource type="Script" path="res://src/World.gd" id="1_d28aw"]
+[ext_resource type="Script" path="res://addons/ai_semantic_agents/gateway/SKAgent.cs" id="1_soqk6"]
+[ext_resource type="MeshLibrary" uid="uid://bi4k1n1nc8e38" path="res://assets/mlib.tres" id="2_uvhx4"]
+[ext_resource type="Script" path="res://src/CustomAgent.gd" id="2_y8an7"]
+[ext_resource type="PackedScene" uid="uid://b6pv7km5eeygm" path="res://assets/Kenney Dungeon/character-human.glb" id="4_p5wdl"]
+[ext_resource type="Resource" uid="uid://d0qledohml8cg" path="res://src/MyGateway.tres" id="5_r0ywy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kc6i5"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_vbs4v"]
+sky_material = SubResource("ProceduralSkyMaterial_kc6i5")
+
+[sub_resource type="Environment" id="Environment_ru574"]
+background_mode = 2
+background_color = Color(0.905882, 0.905882, 0.905882, 1)
+sky = SubResource("Sky_vbs4v")
+ambient_light_source = 3
+ambient_light_color = Color(0.6, 0.6, 0.6, 1)
+tonemap_mode = 3
+glow_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l3alb"]
+
+[node name="Node" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ru574")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.824126, -0.456483, 0.33532, 0, 0.592013, 0.805928, -0.566406, 0.664187, -0.487894, 0, 0, 0)
+light_color = Color(1, 1, 0.858824, 1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("1_d28aw")
+
+[node name="GridMap" type="GridMap" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+mesh_library = ExtResource("2_uvhx4")
+physics_material = SubResource("PhysicsMaterial_l3alb")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+bake_navigation = true
+data = {
+"cells": PackedInt32Array(2, 65535, 8, 2, 0, 1441800, 2, 1, 1441802, 2, 2, 1441800, 2, 3, 1441800, 3, 3, 1441800, 3, 4, 7, 4, 3, 1441800, 4, 2, 7, 4, 1, 7, 3, 1, 1441800, 3, 0, 1441800, 3, 65535, 7, 3, 2, 1441800, 4, 4, 1441800, 4, 5, 7, 3, 5, 1441800, 2, 5, 1441800, 2, 4, 1441800, 4, 0, 1441800, 4, 65535, 1441800, 5, 5, 1441800, 5, 4, 1441800, 5, 3, 1441800, 5, 2, 1441800, 5, 1, 1441800, 5, 0, 1441800, 5, 65535, 1441800, 6, 65535, 1441808, 6, 0, 1441808, 6, 1, 1441808, 6, 3, 1441808, 6, 4, 1441808, 6, 5, 1441808, 6, 6, 1441808, 5, 6, 1441808, 4, 6, 1441808, 3, 6, 1441808, 2, 6, 1441808, 1, 6, 1441808, 1, 5, 1441808, 1, 4, 1441808, 1, 3, 1441808, 1, 2, 1441808, 1, 1, 1441808, 1, 0, 1441808, 1, 65535, 1441808, 1, 7, 1441808, 6, 65534, 655368, 5, 65534, 655368, 4, 65534, 655368, 3, 65534, 655368, 2, 65534, 655368, 1, 65534, 655368, 6, 2, 7)
+}
+
+[node name="NPC" type="Node3D" parent="World" node_paths=PackedStringArray("world")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, 4)
+script = ExtResource("2_y8an7")
+WORLD_POS = Vector3(4, 0, 4)
+agent_path = NodePath("SKAgent")
+world = NodePath("..")
+
+[node name="SKAgent" type="Node" parent="World/NPC"]
+script = ExtResource("1_soqk6")
+Gateway = ExtResource("5_r0ywy")
+
+[node name="model" parent="World/NPC" instance=ExtResource("4_p5wdl")]
+transform = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World/NPC"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 3.75954, 3.26795, 3.6924)
+doppler_tracking = 2
+projection = 1
+current = true
+size = 7.0

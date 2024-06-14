@@ -1,0 +1,42 @@
+{
+    "version": "1.0",
+    "skillName": "Transform",
+    "functionName": "Capitalize",
+    "description": "Capitalizes the input.",
+    "filePath": "addons\\ai_semantic_agents\\skills\\Transform\\Capitalize\\skprompt.txt",
+    "results": [
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "i am a Silly guy doing Things"
+                }
+            ],
+            "output": {
+                "prompt": "RESPOND WITH A CAPITALIZED VERSION OF THE INPUT.\nYOUR RESPONSE MUST MATCH THE INPUT CHARACTER BY CHARACTER,\nBUT ALL THE LOWERCASE CHARACTERS ARE REPLACED BY THEIR UPPERCASE COUNTERPARTS.\n\nExamples:\n\n[EXAMPLES]\nI: 'Hi ChatGPT!'\nO: 'HI CHATGPT!'\n\nI: 'hello there buddy'\nO: 'HELLO THERE BUDDY'\n\n[END EXAMPLES]\n\n[INPUT]\ni am a Silly guy doing Things\n[END INPUT]\n",
+                "durationInMilliseconds": 1936.4429,
+                "inputTokens": 107,
+                "outputTokens": 11,
+                "result": "I AM A SILLY GUY DOING THINGS",
+                "chatCompletionResult": "I AM A SILLY GUY DOING THINGS"
+            }
+        }
+    ]
+}

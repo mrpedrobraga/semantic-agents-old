@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0qledohml8cg"]
+
+[ext_resource type="Script" path="res://addons/ai_semantic_agents/gateway/SKGateway.cs" id="1_smurn"]
+
+[resource]
+script = ExtResource("1_smurn")
+USE_AZURE_SERVICES = false
+AZURE_ENDPOINT = ""
+USE_HUGGING_FACE = false
+GENERATION_MODEL = "text-davinci-003"
+EMBEDDING_MODEL = "text-embedding-ada-002"
+API_KEY = "[REDACTED]"
+SKILLS_DIRECTORY = "C:/Users/carlo/OneDrive/Documentos/AI/addons/ai_semantic_agents/skills/"

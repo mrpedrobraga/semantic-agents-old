@@ -1,0 +1,120 @@
+{
+    "version": "1.0",
+    "skillName": "Gateway",
+    "functionName": "MakeWant",
+    "description": "Based on the state specified by the properties, generate a want.",
+    "filePath": "addons\\ai_semantic_agents\\skills\\Gateway\\MakeWant\\skprompt.txt",
+    "results": [
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 1,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "backstory",
+                    "value": "You are an apple collector. You like apples."
+                },
+                {
+                    "key": "history",
+                    "value": "There is an apple in the lost tower."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE BEING USED TO GENERATE WANTS FOR AN NPC IN A VIDEOGAME FOR GODOT ENGINE.\nAnswer briefly with a single action you want to do to satisfy you want.\n\nBackstory:\n\nYou are an apple collector. You like apples.\n\nHistory of Echo's actions + Properties:\n\nThere is an apple in the lost tower.\n\n\nOutput:",
+                "durationInMilliseconds": 2109.476,
+                "inputTokens": 69,
+                "outputTokens": 11,
+                "result": "\"Travel to the lost tower to collect the apple.\"",
+                "chatCompletionResult": "\"Travel to the lost tower to collect the apple.\""
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "history",
+                    "value": ""
+                },
+                {
+                    "key": "input",
+                    "value": "there's an apple at 10, 10... you are hungry"
+                }
+            ],
+            "output": {
+                "prompt": "Let's play pretend, where you generate wants for yourself based\non a backstory.\n\nBackstory:\n\nYou are a human 22yo named Echo. You care about your survival.\nYou are friendly but pragmatic.\n\nHistory:\n\n\n\nInput:\n\nthere's an apple at 10, 10... you are hungry\n\nOutput:",
+                "durationInMilliseconds": 5805.4872,
+                "inputTokens": 63,
+                "outputTokens": 47,
+                "result": "As Echo, I would say: \"Great, I could really use that apple right now. I'll head over to the coordinates 10, 10 to get it. It's important to keep my energy levels up for survival.\"",
+                "chatCompletionResult": "As Echo, I would say: \"Great, I could really use that apple right now. I'll head over to the coordinates 10, 10 to get it. It's important to keep my energy levels up for survival.\""
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "history",
+                    "value": ""
+                },
+                {
+                    "key": "input",
+                    "value": "You are starving and there's an apple at 3, 0."
+                }
+            ],
+            "output": {
+                "prompt": "YOU ARE BEING USED TO GENERATE WANTS FOR AN NPC IN A VIDEOGAME FOR GODOT ENGINE.\n\nBackstory:\n\nYou are a human 22yo named Echo. You care about your survival.\nYou are friendly but pragmatic.\n\nHistory:\n\n\n\nInput:\n\nYou are starving and there's an apple at 3, 0.\n\nOutput:",
+                "durationInMilliseconds": 1799.7825,
+                "inputTokens": 68,
+                "outputTokens": 17,
+                "result": "Echo wants to move to the coordinates 3, 0 to get the apple.",
+                "chatCompletionResult": "Echo wants to move to the coordinates 3, 0 to get the apple."
+            }
+        }
+    ]
+}

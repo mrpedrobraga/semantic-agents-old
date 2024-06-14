@@ -1,0 +1,74 @@
+{
+    "version": "1.0",
+    "skillName": "Greet",
+    "functionName": "GreetKindly",
+    "description": "Greets the user kindly.",
+    "filePath": "addons\\ai_semantic_agents\\skills\\Greet\\GreetKindly\\skprompt.txt",
+    "results": [
+        {
+            "completionConfig": {
+                "label": "gpt-4",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "gpt-4",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "chat-completion",
+                "chatSystemMessage": "You are an AI assistant that helps people find information."
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "Hello there!"
+                }
+            ],
+            "output": {
+                "prompt": "GREET THE USER KINDLY BASED ON THEIR NAME.\n\n[INPUT]\nHello there!\n[END INPUT]\n",
+                "durationInMilliseconds": 1477.809,
+                "inputTokens": 22,
+                "outputTokens": 9,
+                "result": "Hello! How can I assist you today?",
+                "chatCompletionResult": "Hello! How can I assist you today?"
+            }
+        },
+        {
+            "completionConfig": {
+                "label": "text-davinci-003",
+                "aiService": "OpenAI",
+                "deploymentOrModelId": "text-davinci-003",
+                "endpoint": null,
+                "useCustomEndpoint": false,
+                "endpointType": "text-completion"
+            },
+            "requestSettings": {
+                "temperature": 0,
+                "topP": 0,
+                "presencePenalty": 0,
+                "frequencyPenalty": 0,
+                "maxTokens": 256,
+                "stopSequences": []
+            },
+            "variables": [
+                {
+                    "key": "input",
+                    "value": "Hello I'm Pedro."
+                }
+            ],
+            "output": {
+                "prompt": "GREET THE USER KINDLY BASED ON THEIR NAME.\n\n[INPUT]\nHello I'm Pedro.\n[END INPUT]\n",
+                "durationInMilliseconds": 1795.2153,
+                "inputTokens": 33,
+                "outputTokens": 9,
+                "result": "\nHello Pedro, nice to meet you!",
+                "textCompletionResult": "\nHello Pedro, nice to meet you!"
+            }
+        }
+    ]
+}
